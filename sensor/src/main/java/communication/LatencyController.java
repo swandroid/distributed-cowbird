@@ -64,7 +64,7 @@ public class LatencyController {
     }
 
 
-    public long getLatency() {
+    public double getLatency() {
         lock.lock();
         try {
             if(inId == outId) {
