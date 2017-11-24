@@ -132,8 +132,8 @@ public class FogtestSensor extends AbstractSwanSensor {
     public String[] getValuePaths()  {
 
         //return new String[]{ VALUE};
-        String [] values = new String[1000000];
-        for(int index = 0; index < 1000000; index++) {
+        String [] values = new String[10000];
+        for(int index = 0; index < 10000; index++) {
             values[index] = "value"+index;
         }
 

@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class CowbirdConfiguration {
 
-    private final static int DEFAULT_SYSTEM_LOAD = 8;
+    private final static int DEFAULT_SYSTEM_LOAD = Runtime.getRuntime().availableProcessors();
 
     public final static int DEFAULT_FOG_PORT = 10000;
     private int fogPort = DEFAULT_FOG_PORT;

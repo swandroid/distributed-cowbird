@@ -25,12 +25,15 @@ public class LatencyMonitor {
 
     public long getNotificationTime(String id) {
         if(notificationTimeMap.containsKey(id)) {
-           Long timestamp = notificationTimeMap.get(id).poll();
-           averageNotificationTimeMap.get(id).add(timestamp);
-           return timestamp;
-        } else {
-            return 0;
+           ConcurrentLinkedQueue<Long> queue = notificationTimeMap.get(id);
+           if(queue.size() > 0) {
+               Long timestamp = queue.poll();
+               averageNotificationTimeMap.get(id).add(timestamp);
+               return timestamp;
+           }
         }
+
+        return 0;
     }
 
 

@@ -65,7 +65,6 @@ public abstract class AbstractSwanSensor implements SensorInterface {
             Producer.sharedProducer().send(message);
         } else {
             try {
-                System.out.println("value path  " + valuePath);
                 //TODO: Two id's with same valupath and different configuration gives different result. This is not handled currently.
                 getValues().get(valuePath).add(new TimestampedValue(value, now));
             } catch (OutOfMemoryError e) {
@@ -78,8 +77,11 @@ public abstract class AbstractSwanSensor implements SensorInterface {
             if (id != null) {
 
 
+                String parentId = id;
                 int index = id.indexOf(".");
-                String parentId = id.substring(0, index);
+                if(index > 0) {
+                    parentId = id.substring(0, index);
+                }
                 LatencyMonitor.sharedInstance().addNotificationTime(parentId, System.currentTimeMillis());
                 notifyDataChangedForId(id);
             }// else {
