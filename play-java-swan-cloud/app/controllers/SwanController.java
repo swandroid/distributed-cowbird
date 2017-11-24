@@ -1031,7 +1031,7 @@ public class SwanController extends Controller {
 
         String id = "ME_test1-2345" + indexExpression++;
         // 3600000
-        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 2000} > 95.0";
+        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 1000} > 95.0";
 
         try {
             FrontendManager.sharedInstance().registerTriStateExpression((TriStateExpression) ExpressionFactory.parse(myExpression), new TriStateExpressionListener() {
