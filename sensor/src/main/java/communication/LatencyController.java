@@ -68,7 +68,7 @@ public class LatencyController {
         lock.lock();
         try {
             if(inId == outId) {
-                return (inTimestamp - outTimestamp)/2;
+                return (inTimestamp - outTimestamp)/2.0;
             } else {
                 throw new RuntimeException("Something wrong when registering id");
             }

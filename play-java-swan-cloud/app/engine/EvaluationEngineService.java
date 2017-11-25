@@ -187,7 +187,7 @@ public class EvaluationEngineService /* implements Runnable */ {
 
 
                 long waitingLatency = System.currentTimeMillis() - LatencyMonitor.sharedInstance().getNotificationTime(head.getId());
-                System.out.println("Waiting time: " + waitingLatency);
+                System.out.print("" + waitingLatency + "\t");
                 long start = System.currentTimeMillis();
                 // System.out.println("Calling evaluate from engine service for " + head.getId())
                 result = mEvaluationManager.evaluate(
@@ -196,7 +196,8 @@ public class EvaluationEngineService /* implements Runnable */ {
                 long end = System.currentTimeMillis();
                 long evaluationTime = (end-start);
 
-                System.out.println("Evaluation time: " + evaluationTime + "ms");
+                //System.out.println("Evaluation time: " + evaluationTime + "ms");
+                System.out.println("" + evaluationTime);
                 System.out.flush();
                 // update with statistics: evaluationTime and evaluationDelay
                 head.evaluated((end - start), evaluationDelay);

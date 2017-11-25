@@ -14,6 +14,7 @@ public class AckPoller extends Thread {
     }
 
     public void run() {
+        System.out.println("Communication Latency:");
         while(!isInterrupted()) {
             try {
                 String message = inputStream.readLine();
@@ -22,7 +23,7 @@ public class AckPoller extends Thread {
                 int id = object.getInt("id");
                 LatencyController.sharedInstance().setIncomingId(id);
                 LatencyController.sharedInstance().setIncomingTimestamp(System.currentTimeMillis());
-                System.out.println("Latency " + LatencyController.sharedInstance().getLatency());
+                System.out.println("" + LatencyController.sharedInstance().getLatency());
             } catch (IOException exception) {
                 System.out.println(exception.getLocalizedMessage());
             }
