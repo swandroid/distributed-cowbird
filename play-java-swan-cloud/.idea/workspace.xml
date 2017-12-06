@@ -19,51 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CowbirdNodeApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/distributed/node/CowbirdNodeApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugins.sbt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sbt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontendManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FrontendManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/distributed/frontend/FrontendManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="139" column="39" lean-forward="false" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrontendActor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/distributed/frontend/FrontendActor.java">
+      <file leaf-file-name="CowbirdManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/distributed/manager/CowbirdManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="3077">
+              <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="210" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -82,8 +52,8 @@
       <file leaf-file-name="SwanController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/SwanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16898">
-              <caret line="1033" column="86" lean-forward="false" selection-start-line="1033" selection-start-column="86" selection-end-line="1033" selection-end-column="86" />
+            <state relative-caret-position="17731">
+              <caret line="1082" column="122" lean-forward="false" selection-start-line="1082" selection-start-column="122" selection-end-line="1082" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -102,12 +72,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EvaluationEngineService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/engine/EvaluationEngineService.java">
+      <file leaf-file-name="ExpressionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/engine/ExpressionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="199" column="54" lean-forward="false" selection-start-line="199" selection-start-column="54" selection-end-line="199" selection-end-column="54" />
+            <state relative-caret-position="136">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EvaluationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/engine/EvaluationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FogtestSensor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sensors/impl/FogtestSensor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,12 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>registerExpression(</find>
-      <find>doRegister</find>
-      <find>bind</find>
-      <find>registerExpression()</find>
-      <find>DoNoti</find>
-      <find>Fog</find>
       <find>fogtest</find>
       <find>registerExpression</find>
       <find>fog</find>
@@ -157,7 +143,6 @@
       <find>doWOrk</find>
       <find>bindToS</find>
       <find>register</find>
-      <find>pool</find>
       <find>regk</find>
       <find>doRegist</find>
       <find>done</find>
@@ -165,6 +150,13 @@
       <find>DoWork</find>
       <find>termination</find>
       <find>start</find>
+      <find>DONE</find>
+      <find>evaluationThread</find>
+      <find>mEvaluationThread.notifyAll</find>
+      <find>notifi</find>
+      <find>getRootId</find>
+      <find>pool</find>
+      <find>registerExpre</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -184,7 +176,6 @@
         <option value="$PROJECT_DIR$/app/distributed/NodeActor.java" />
         <option value="$PROJECT_DIR$/app/distributed/messages/FrontendRegistrationMessage.java" />
         <option value="$PROJECT_DIR$/app/distributed/Roles.java" />
-        <option value="$PROJECT_DIR$/app/distributed/manager/CowbirdManager.java" />
         <option value="$PROJECT_DIR$/app/distributed/node/CowbirdNode.java" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/distributed/frontend/FrontendResourceManagerActor.java" />
@@ -196,19 +187,20 @@
         <option value="$PROJECT_DIR$/app/distributed/frontend/resource/CowbirdResourceState.java" />
         <option value="$PROJECT_DIR$/app/distributed/frontend/location/Coordinate.java" />
         <option value="$PROJECT_DIR$/app/distributed/frontend/location/LocationService.java" />
-        <option value="$PROJECT_DIR$/app/distributed/frontend/FrontendManager.java" />
         <option value="$PROJECT_DIR$/app/sensors/impl/TestSensor.java" />
         <option value="$PROJECT_DIR$/app/interdroid/swancore/swansong/TimestampedValue.java" />
         <option value="$PROJECT_DIR$/app/engine/remote/RemoteEvaluationLatencyMonitor.java" />
         <option value="$PROJECT_DIR$/app/engine/EvaluationManager.java" />
-        <option value="$PROJECT_DIR$/app/sensors/impl/FogtestSensor.java" />
         <option value="$PROJECT_DIR$/app/sensors/base/AbstractSwanSensor.java" />
         <option value="$PROJECT_DIR$/app/engine/LatencyMonitor.java" />
         <option value="$PROJECT_DIR$/app/distributed/node/CowbirdConfiguration.java" />
         <option value="$PROJECT_DIR$/app/distributed/node/CowbirdNodeApp.java" />
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/app/controllers/SwanController.java" />
+        <option value="$PROJECT_DIR$/app/distributed/manager/CowbirdManager.java" />
         <option value="$PROJECT_DIR$/app/engine/EvaluationEngineService.java" />
+        <option value="$PROJECT_DIR$/app/sensors/impl/FogtestSensor.java" />
+        <option value="$PROJECT_DIR$/app/controllers/SwanController.java" />
+        <option value="$PROJECT_DIR$/app/distributed/frontend/FrontendManager.java" />
       </list>
     </option>
   </component>
@@ -254,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -426,9 +417,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -602,12 +594,16 @@
       <workItem from="1511539646717" duration="766000" />
       <workItem from="1511562279889" duration="10000" />
       <workItem from="1511562455917" duration="1234000" />
-      <workItem from="1511627709230" duration="115000" />
+      <workItem from="1511627709230" duration="2371000" />
+      <workItem from="1511641983758" duration="571000" />
+      <workItem from="1511702182323" duration="6119000" />
+      <workItem from="1512063993229" duration="2757000" />
+      <workItem from="1512270004888" duration="155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76973000" />
+    <option name="totallyTimeSpent" value="88831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -627,7 +623,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2539342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -659,13 +655,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/distributed/messages/result/ValueResultMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/distributed/messages/AckWorkRequestMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -828,14 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/engine/EvaluationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/sensors/base/SensorPoller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -900,16 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sensors/impl/FogtestSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/sensors/base/AbstractSensorBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -956,14 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/distributed/manager/CowbirdManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="44" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/distributed/node/CowbirdNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
@@ -977,8 +940,8 @@
         <state relative-caret-position="459">
           <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#721#722#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1023,10 +986,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SwanController.java">
+    <entry file="file://$PROJECT_DIR$/app/distributed/CowbirdClusterMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16898">
-          <caret line="1033" column="86" lean-forward="false" selection-start-line="1033" selection-start-column="86" selection-end-line="1033" selection-end-column="86" />
+        <state relative-caret-position="459">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/distributed/manager/CowbirdManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="210" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1042,26 +1013,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/distributed/CowbirdClusterMonitor.java">
+    <entry file="file://$PROJECT_DIR$/app/engine/ExpressionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/distributed/frontend/FrontendManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/engine/EvaluationEngineService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="199" column="54" lean-forward="false" selection-start-line="199" selection-start-column="54" selection-end-line="199" selection-end-column="54" />
+        <state relative-caret-position="1224">
+          <caret line="80" column="124" lean-forward="false" selection-start-line="80" selection-start-column="68" selection-end-line="80" selection-end-column="124" />
+          <folding>
+            <element signature="e#1091#1109#0" expanded="false" />
+            <element signature="e#2186#4654#0" expanded="false" />
+            <element signature="e#4653#4654#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/engine/EvaluationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sensors/impl/FogtestSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SwanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17731">
+          <caret line="1082" column="122" lean-forward="false" selection-start-line="1082" selection-start-column="122" selection-end-line="1082" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/distributed/frontend/FrontendManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="139" column="39" lean-forward="false" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
           <folding />
         </state>
       </provider>

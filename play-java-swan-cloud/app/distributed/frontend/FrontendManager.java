@@ -137,22 +137,25 @@ public class FrontendManager {
     protected void registerCowbirdNode(CowbirdState cowbirdState) {
         resourceLock.lock();
         try {
+          for(int index = 0; index < 100; index++) {
 
-            CowbirdResourceState resourceState = new CowbirdResourceState(cowbirdState);
-            String key = cowbirdState.getCowbirdRef().path().toString();
+                CowbirdResourceState resourceState = new CowbirdResourceState(cowbirdState);
+                String key = cowbirdState.getCowbirdRef().path().toString();
 
-            if(cowbirdStateMap.containsKey(key)) {
-                resourceState = cowbirdStateMap.get(key);
-                resourceState.setState(cowbirdState);
-            } else {
-                String ip = cowbirdState.getCowbirdRef().path().address().host().get();
-                Coordinate coordinates = LocationService.sharedInstance().getCoordinatesFromIP(ip);
-                resourceState.setCoordinates(coordinates);
+                if(cowbirdStateMap.containsKey(key)) {
+                    resourceState = cowbirdStateMap.get(key);
+                    resourceState.setState(cowbirdState);
+                } else {
+                    String ip = cowbirdState.getCowbirdRef().path().address().host().get();
+                    Coordinate coordinates = LocationService.sharedInstance().getCoordinatesFromIP(ip);
+                    resourceState.setCoordinates(coordinates);
+                }
+
+                cowbirdStateMap.put(cowbirdState.getCowbirdRef().path().toString(), resourceState);
+
             }
-
-            cowbirdStateMap.put(cowbirdState.getCowbirdRef().path().toString(), resourceState);
-
-        } finally {
+        }
+        finally {
             resourceLock.unlock();
         }
     }
@@ -166,9 +169,9 @@ public class FrontendManager {
             while (iterator.hasNext()) {
                 String key = iterator.next();
                 CowbirdResourceState resourceState = cowbirdStateMap.get(key);
-                if(resourceState.getResourceUtilization() >= resourceState.getState().getCurrentLoad()) {
-                    continue;
-                }
+//                if(resourceState.getResourceUtilization() >= resourceState.getState().getCurrentLoad()) {
+//                    continue;
+//                }
 
                 double distance = LocationService.sharedInstance().distance(requestCoordinates, resourceState.getCoordinates());
                 resourceState.setDistanceFromRequest(distance);

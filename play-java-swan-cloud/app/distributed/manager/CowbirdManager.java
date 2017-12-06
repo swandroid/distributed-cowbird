@@ -203,10 +203,12 @@ public class CowbirdManager extends AbstractActor {
             CowbirdState head = fogCowbirds.peek();
 
             /*  Fog workload threshold. */
-            if ((head.getCurrentLoad() < head.getSystemLoad() * 2) || (cloudCowbirds.size() == 0)) {
-                registerCowbird(fogCowbirds.poll().getCowbirdRef());
-                return;
-            }
+//            if ((head.getCurrentLoad() < head.getSystemLoad() * 2) || (cloudCowbirds.size() == 0)) {
+//                registerCowbird(fogCowbirds.poll().getCowbirdRef());
+//                return;
+//            }
+            registerCowbird(fogCowbirds.poll().getCowbirdRef());
+            return;
         }
 
         if (cloudCowbirds.size() > 0) {

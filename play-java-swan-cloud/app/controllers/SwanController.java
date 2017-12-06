@@ -1062,6 +1062,8 @@ public class SwanController extends Controller {
 
     public Result registerSensor() {
 
+        long now = System.currentTimeMillis();
+
 
         Coordinate coordinates = LocationService.sharedInstance().getCoordinatesFromIP(request().remoteAddress());
 
@@ -1078,7 +1080,7 @@ public class SwanController extends Controller {
                 jsonObject.put("timestamp", System.currentTimeMillis());
 
 
-                System.out.println("registered sensor " + jsonObject.toString());
+                System.out.println("registered sensor " + jsonObject.toString() + " " + (System.currentTimeMillis() - now));
                 return ok(jsonObject.toString());
             } catch (JSONException exception) {
                 System.out.println(exception.getLocalizedMessage());
@@ -1091,7 +1093,6 @@ public class SwanController extends Controller {
     int registeredExpressions = 0;
 
     public Result registerExpression() {
-
 
         String jsonContent = request().body().asText();
 

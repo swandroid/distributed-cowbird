@@ -251,7 +251,7 @@ public class EvaluationEngineService /* implements Runnable */ {
                     }
 
 //                    System.out.println("Terminating thread: " + thread.getThreadName());
-                     System.out.println("DONE: " + thread.getThreadName());
+                    //  System.out.println("DONE: " + thread.getThreadName());
                 }
             } catch (Exception e) {
                 e.printStackTrace();

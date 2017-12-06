@@ -125,7 +125,7 @@ public class TimestampedValue implements Serializable, //Parcelable,
 	 *         be invalid when this timestamp is no longer in the history
 	 *         window)
 	 */
-	/*public static TimestampedValue calculateMean(
+	public static TimestampedValue calculateMean(
 			final List<TimestampedValue> values) {
 		double sumValues = 0.0;
 
@@ -135,24 +135,24 @@ public class TimestampedValue implements Serializable, //Parcelable,
 		}
 		return new TimestampedValue(sumValues / values.size(),
 				values.get(0).mTimestamp);
-	}*/
+	}
 
 	/* n*n complexity */
-	public static TimestampedValue calculateMean(
-			final List<TimestampedValue> values) {
-		long now = System.currentTimeMillis();
-
-		double sumValues = 0.0;
-		for (TimestampedValue value1 : values) {
-			for (TimestampedValue value2 : values) {
-				for (TimestampedValue value : values) {
-					sumValues += Double.valueOf(value.mValue.toString());
-				}
-			}
-		}
-		return new TimestampedValue(sumValues / values.size(),
-				values.get(0).mTimestamp);
-	}
+//	public static TimestampedValue calculateMean(
+//			final List<TimestampedValue> values) {
+//		long now = System.currentTimeMillis();
+//
+//		double sumValues = 0.0;
+//		for (TimestampedValue value1 : values) {
+//			for (TimestampedValue value2 : values) {
+//				for (TimestampedValue value : values) {
+//					sumValues += Double.valueOf(value.mValue.toString());
+//				}
+//			}
+//		}
+//		return new TimestampedValue(sumValues / values.size(),
+//				values.get(0).mTimestamp);
+//	}
 
 
 	/**

@@ -46,8 +46,11 @@ public class FogtestSensor extends AbstractSwanSensor {
             }
         }
 
+        private long SENSOR_DELAY = 100;
 
         public void run() {
+
+            long lastTimestamp = 0;
 
             try {
                 socket = server.accept();
@@ -62,11 +65,18 @@ public class FogtestSensor extends AbstractSwanSensor {
                 try {
 
                     String message = (String) inputBuffer.readLine();
+                    long now = System.currentTimeMillis();
 
                     try {
                         JSONObject json = new JSONObject(message);
 
-                        long now = System.currentTimeMillis();
+                        if(SENSOR_DELAY > (now - lastTimestamp)) {
+                            try {
+                                Thread.sleep(SENSOR_DELAY - (now - lastTimestamp));
+                            } catch (InterruptedException exception) {
+                                System.out.println(exception.getLocalizedMessage());
+                            }
+                        }
 
                         int id = json.getInt("id");
                         // updateResult(FogtestSensor.this,json.get("data"), json.getLong("timestamp"));
@@ -82,6 +92,8 @@ public class FogtestSensor extends AbstractSwanSensor {
                             outputStream.writeBytes(jsonMessage);
                             outputStream.writeBytes("\n");
                         }
+
+                        lastTimestamp = now;
 
                     } catch (JSONException e) {
                         e.printStackTrace();
