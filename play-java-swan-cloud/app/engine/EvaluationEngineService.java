@@ -18,6 +18,8 @@ public class EvaluationEngineService /* implements Runnable */ {
 
     private static EvaluationEngineService instance = null;
 
+    static long STARTING_TIME = System.currentTimeMillis();
+    final long MEASURE_TIME = 30000;
 
     private EvaluationEngineService(){
 
@@ -187,7 +189,7 @@ public class EvaluationEngineService /* implements Runnable */ {
 
 
                 long waitingLatency = System.currentTimeMillis() - LatencyMonitor.sharedInstance().getNotificationTime(head.getId());
-                System.out.print("" + waitingLatency + "\t");
+                //System.out.print("" + waitingLatency + "\t");
                 long start = System.currentTimeMillis();
                 // System.out.println("Calling evaluate from engine service for " + head.getId())
                 result = mEvaluationManager.evaluate(
@@ -196,11 +198,16 @@ public class EvaluationEngineService /* implements Runnable */ {
                 long end = System.currentTimeMillis();
                 long evaluationTime = (end-start);
 
+                if((System.currentTimeMillis()-STARTING_TIME) >= MEASURE_TIME){
+                    System.out.println("" + waitingLatency + "\t" + evaluationTime+"\n");
+                    STARTING_TIME = System.currentTimeMillis();
+                }
                 //System.out.println("Evaluation time: " + evaluationTime + "ms");
-                System.out.println("" + evaluationTime);
-                System.out.flush();
+                //System.out.println("" + evaluationTime);
+                //System.out.flush();
                 // update with statistics: evaluationTime and evaluationDelay
                 head.evaluated((end - start), evaluationDelay);
+
 
             } catch (SwanException e) {
                 e.printStackTrace();

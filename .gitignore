@@ -14,6 +14,6 @@
 *.eml
 */dist/
 *.cache
-*.idea/
+*.idea*
 */out/
 *target/
