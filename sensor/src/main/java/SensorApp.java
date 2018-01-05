@@ -48,7 +48,7 @@ public class SensorApp {
         int id = 0;
 
         long lastAckedMessage = System.currentTimeMillis();
-        int delay = 30000;
+        int delay = 10000;
 
         try {
             CommunicationController controller = new CommunicationController(cowbirdNodeAddress, cowbirdNodePort);

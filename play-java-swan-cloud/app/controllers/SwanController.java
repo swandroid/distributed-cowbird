@@ -1031,7 +1031,7 @@ public class SwanController extends Controller {
 
         String id = "ME_test1-2345" + indexExpression++;
         // 3600000
-        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 1000} > 95.0";
+        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 10000} > 95.0";
 
         try {
             FrontendManager.sharedInstance().registerTriStateExpression((TriStateExpression) ExpressionFactory.parse(myExpression), new TriStateExpressionListener() {
@@ -1066,7 +1066,7 @@ public class SwanController extends Controller {
 
         String id = "ME_test1-2345" + indexExpression++;
         // 3600000
-        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 1000}";
+        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 10000}";
 
         try {
             FrontendManager.sharedInstance().registerValueExpression((ValueExpression) ExpressionFactory.parse(myExpression), new ValueExpressionListener() {
@@ -1091,7 +1091,7 @@ public class SwanController extends Controller {
         for(int i=0;i<1000;i++) {
             String id = "ME_test1-2345" + indexExpression++;
             // 3600000
-            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 1000} > 95.0";
+            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 10000} > 95.0";
 
             try {
                 ExpressionManager.registerTriStateExpression(id, (TriStateExpression) ExpressionFactory.parse(myExpression), new TriStateExpressionListener() {
@@ -1118,7 +1118,7 @@ public class SwanController extends Controller {
         for(int i=0;i<1000;i++) {
             String id = "ME_test1-2345" + indexExpression++;
             // 3600000
-            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 1000}";
+            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 10000}";
 
             try {
                 ExpressionManager.registerValueExpression(id, (ValueExpression) ExpressionFactory.parse(myExpression), new ValueExpressionListener() {

@@ -19,7 +19,7 @@ public class EvaluationEngineService /* implements Runnable */ {
     private static EvaluationEngineService instance = null;
 
     static long STARTING_TIME = System.currentTimeMillis();
-    final long MEASURE_TIME = 30000;
+    final long MEASURE_TIME = 10000;
 
     private EvaluationEngineService(){
 
