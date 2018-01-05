@@ -1060,6 +1060,90 @@ public class SwanController extends Controller {
     }
 
 
+
+    public Result registerFogValueExpression() {
+        System.out.println("Fog expression registered!");
+
+        String id = "ME_test1-2345" + indexExpression++;
+        // 3600000
+        String myExpression = "self@fogtest:value"+(fogTestId++)+"{MEAN, 1000}";
+
+        try {
+            FrontendManager.sharedInstance().registerValueExpression((ValueExpression) ExpressionFactory.parse(myExpression), new ValueExpressionListener() {
+                @Override
+                public void onNewValues(String id, TimestampedValue[] newValues) {
+                    if (newValues != null && newValues.length > 0) {
+                        System.out.println("Fog local id: " + id + " " + newValues[newValues.length - 1].toString());
+                    }
+                }
+            });
+        } catch (ExpressionParseException e) {
+            e.printStackTrace();
+        }
+
+        return ok("Registered");
+    }
+
+
+    public Result registerFogLocalTristateExpression() {
+        System.out.println("Fog expression registered!");
+
+        for(int i=0;i<1000;i++) {
+            String id = "ME_test1-2345" + indexExpression++;
+            // 3600000
+            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 1000} > 95.0";
+
+            try {
+                ExpressionManager.registerTriStateExpression(id, (TriStateExpression) ExpressionFactory.parse(myExpression), new TriStateExpressionListener() {
+                    @Override
+                    public void onNewState(String id, long timestamp, TriState newState) {
+
+                        System.out.println(" Fog test local id: " + id + " " + newState);
+                    }
+                });
+            } catch (SwanException e) {
+                e.printStackTrace();
+            } catch (ExpressionParseException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return ok("Registered");
+    }
+
+
+    public Result registerFogLocalValueExpression() {
+        System.out.println("Fog expression registered!");
+
+        for(int i=0;i<1000;i++) {
+            String id = "ME_test1-2345" + indexExpression++;
+            // 3600000
+            String myExpression = "self@fogtestlocal:value" + (fogTestId++) + "{MEAN, 1000}";
+
+            try {
+                ExpressionManager.registerValueExpression(id, (ValueExpression) ExpressionFactory.parse(myExpression), new ValueExpressionListener() {
+                    @Override
+                    public void onNewValues(String id, TimestampedValue[] newValues) {
+                        if (newValues != null && newValues.length > 0) {
+                            System.out.println("Foglocal (Value):" + newValues[newValues.length - 1].toString());
+                        }
+                    }
+                });
+            } catch (SwanException e) {
+                e.printStackTrace();
+            } catch (ExpressionParseException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+        return ok("Registered");
+    }
+
+
+
+
+
     public Result registerSensor() {
 
         long now = System.currentTimeMillis();

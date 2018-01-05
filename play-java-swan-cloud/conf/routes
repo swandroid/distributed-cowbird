@@ -122,6 +122,11 @@ GET /register/fog/expression                        controllers.SwanController.r
 
 GET /register/fog/sensor                            controllers.SwanController.registerSensor
 
+GET /register/fog/value/expression                        controllers.SwanController.registerFogValueExpression
+GET /register/fog/local/value/expression                        controllers.SwanController.registerFogLocalValueExpression
+GET /register/fog/local/tristate/expression                        controllers.SwanController.registerFogLocalTristateExpression
+
+
 POST /swan/fog/request/                              controllers.FogController.requestToFog
 
 POST /swan/fog/receive/                              controllers.FogController.receiveFromFog
