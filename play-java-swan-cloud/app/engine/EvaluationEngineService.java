@@ -201,7 +201,7 @@ public class EvaluationEngineService /* implements Runnable */ {
                 long evaluationTime = (end-start);
 
                 if((System.currentTimeMillis()-STARTING_TIME) >= MEASURE_TIME){
-                    System.out.println("" + waitingLatency + "\t" + (evaluationTime/1000000)+"\n");
+                    System.out.println("" + waitingLatency + "\t" + ((double)evaluationTime/1000000)+"\n");
                     STARTING_TIME = System.currentTimeMillis();
                 }
                 //System.out.println("Evaluation time: " + evaluationTime + "ms");
