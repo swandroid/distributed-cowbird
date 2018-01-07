@@ -4,6 +4,7 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
 
 public class AckPoller extends Thread {
 
@@ -23,7 +24,7 @@ public class AckPoller extends Thread {
                 int id = object.getInt("id");
                 LatencyController.sharedInstance().setIncomingId(id);
                 LatencyController.sharedInstance().setIncomingTimestamp(System.currentTimeMillis());
-                System.out.println("" + LatencyController.sharedInstance().getLatency());
+                System.out.println(""+ManagementFactory.getRuntimeMXBean().getName()+ "\t" + LatencyController.sharedInstance().getLatency()+"\n");
             } catch (IOException exception) {
                 System.out.println(exception.getLocalizedMessage());
             }
