@@ -50,7 +50,7 @@ public class FogtestSensor extends AbstractSwanSensor {
 
         public void run() {
 
-            long lastTimestamp = 0;
+            //long lastTimestamp = 0;
 
             try {
                 socket = server.accept();
@@ -65,21 +65,22 @@ public class FogtestSensor extends AbstractSwanSensor {
                 try {
 
                     String message = (String) inputBuffer.readLine();
-                    long now = System.currentTimeMillis();
+
 
                     try {
                         JSONObject json = new JSONObject(message);
 
-                        if(SENSOR_DELAY > (now - lastTimestamp)) {
+                     /*   if(SENSOR_DELAY > (now - lastTimestamp)) {
                             try {
                                 Thread.sleep(SENSOR_DELAY - (now - lastTimestamp));
                             } catch (InterruptedException exception) {
                                 System.out.println(exception.getLocalizedMessage());
                             }
-                        }
+                        }*/
 
                         int id = json.getInt("id");
                         // updateResult(FogtestSensor.this,json.get("data"), json.getLong("timestamp"));
+                        long now = System.currentTimeMillis();
                         updateResult(FogtestSensor.this,json.get("data"), now);
 
                         if(json.getInt("ack") == 1) {
@@ -93,7 +94,14 @@ public class FogtestSensor extends AbstractSwanSensor {
                             outputStream.writeBytes("\n");
                         }
 
-                        lastTimestamp = now;
+                        //lastTimestamp = now;
+                        try {
+                            Thread.sleep(SENSOR_DELAY);
+                        } catch (InterruptedException exception) {
+                            System.out.println(exception.getLocalizedMessage());
+                        }
+
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();
