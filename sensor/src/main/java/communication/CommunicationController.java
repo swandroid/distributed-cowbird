@@ -17,6 +17,7 @@ public class CommunicationController {
 
     public CommunicationController(String address, int port) throws IOException {
         clientSocket = new Socket(address, port);
+        clientSocket.setTcpNoDelay(true);
         outputStream = new DataOutputStream(clientSocket.getOutputStream());
         inputStream = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }

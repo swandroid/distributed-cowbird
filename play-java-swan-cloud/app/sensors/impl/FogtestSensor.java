@@ -59,16 +59,16 @@ public class FogtestSensor extends AbstractSwanSensor {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            long receiveTime = 0;
-            long lastReceivedTimestamp;
+            //long receiveTime = 0;
+            //long lastReceivedTimestamp;
             long now;
 
             while (!isInterrupted()) {
                 try {
 
                     String message = (String) inputBuffer.readLine();
-                    lastReceivedTimestamp = receiveTime;
-                    receiveTime = System.currentTimeMillis();
+                    //lastReceivedTimestamp = receiveTime;
+                    //receiveTime = System.currentTimeMillis();
                     //System.out.println("Delay in receiving data:"+(receiveTime-lastReceivedTimestamp));
 
 
@@ -93,7 +93,7 @@ public class FogtestSensor extends AbstractSwanSensor {
                         }
 
 
-                        try {
+                       /* try {
                             if ((receiveTime - lastReceivedTimestamp) < SENSOR_DELAY) {
                                 Thread.sleep(SENSOR_DELAY - (receiveTime - lastReceivedTimestamp));
                             } else {
@@ -102,7 +102,7 @@ public class FogtestSensor extends AbstractSwanSensor {
 
                         } catch (InterruptedException exception) {
                             System.out.println(exception.getLocalizedMessage());
-                        }
+                        }*/
 
 
                     } catch (JSONException e) {
