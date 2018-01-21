@@ -30,6 +30,7 @@ public class FogtestSensor extends AbstractSwanSensor {
         ServerSocket server;
         Socket socket;
         // ObjectInputStream ois;
+        int port;
 
         BufferedReader inputBuffer;
         DataOutputStream outputStream;
@@ -38,7 +39,7 @@ public class FogtestSensor extends AbstractSwanSensor {
             super(id, valuePath, configuration);
             try {
 
-                int port = CowbirdConfiguration.nodeConfiguration().getFogPort();
+                port = CowbirdConfiguration.nodeConfiguration().getFogPort();
                 server = new ServerSocket(port);
 
             } catch (IOException e) {
@@ -81,7 +82,7 @@ public class FogtestSensor extends AbstractSwanSensor {
                         //System.out.println("process data every:"+ (now-lastTimestamp));
                         updateResult(FogtestSensor.this, json.get("data"), now);
 
-                        if (json.getInt("ack") == 1) {
+                        if (port == 10000 && json.getInt("ack") == 1) {
                             JSONObject jsonObject = new JSONObject();
                             json.put("timestamp", now);
                             json.put("id", id);
