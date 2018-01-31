@@ -20,7 +20,7 @@ public class EvaluationEngineService /* implements Runnable */ {
 
     static long STARTING_TIME = System.currentTimeMillis();
     final long MEASURE_TIME = 10000;
-
+    static double EVALUATION_THROUGHPUT = 0;
     private EvaluationEngineService(){
 
         mEvaluationManager = new EvaluationManager();
@@ -197,11 +197,13 @@ public class EvaluationEngineService /* implements Runnable */ {
                         head.getId(), head.getExpression(),
                         System.currentTimeMillis());
                 //long end = System.currentTimeMillis();
+                EVALUATION_THROUGHPUT++;
                 long end = System.nanoTime();
                 long evaluationTime = (end-start);
 
                 if((System.currentTimeMillis()-STARTING_TIME) >= MEASURE_TIME){
-                    System.out.println("" + waitingLatency + "\t" + ((double)evaluationTime/1000000)+"\n");
+                    System.out.println("" + waitingLatency + "\t" + ((double)evaluationTime/1000000)+ "\t" + EVALUATION_THROUGHPUT+ "\n");
+                    EVALUATION_THROUGHPUT = 0;
                     STARTING_TIME = System.currentTimeMillis();
                 }
                 //System.out.println("Evaluation time: " + evaluationTime + "ms");
